@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin | UNIVEN BuildSafe</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar"><div class="logo">UNIVEN<span>BuildSafe</span></div><nav><a href="dashboard.html">Dashboard</a><a href="map.html">Map</a><a href="projects.html">Projects</a><a href="announcements.html">Notices</a><a class="active" href="admin.html">Admin</a><button id="logout" class="link-button">Logout</button></nav></header>
+<main class="container">
+<p class="tag">ADMINISTRATION</p><h1>Manage System</h1>
+<div class="admin-grid">
+<form id="projectForm" class="form-card">
+<h2>Add Construction Project</h2>
+<input id="name" placeholder="Project name" required>
+<textarea id="description" placeholder="Description" required></textarea>
+<input id="location" placeholder="Location" required>
+<select id="status"><option>Planned</option><option>In Progress</option><option>Completed</option><option>Delayed</option></select>
+<input id="startDate" type="date" required><input id="endDate" type="date" required>
+<input id="affectedArea" placeholder="Affected area" required>
+<input id="latitude" type="number" step="any" placeholder="Latitude" required>
+<input id="longitude" type="number" step="any" placeholder="Longitude" required>
+<button class="btn" type="submit">Add Project</button><p id="projectMessage"></p>
+</form>
+<form id="announcementForm" class="form-card">
+<h2>Create Notice</h2>
+<input id="title" placeholder="Notice title" required>
+<textarea id="announcementMessage" placeholder="Notice message" required></textarea>
+<button class="btn" type="submit">Publish Notice</button><p id="announcementMessageResult"></p>
+</form>
+</div>
+<h2>Existing Projects</h2><div id="adminProjects" class="cards"></div>
+<h2>Student Reports</h2><div id="reports" class="notice-list"></div>
+</main>
+
+<!--change 3-->
+<script src="js/common.js"></script>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

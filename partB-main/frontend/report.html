@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report | UNIVEN BuildSafe</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar"><div class="logo">UNIVEN<span>BuildSafe</span></div><nav><a href="dashboard.html">Dashboard</a><a href="map.html">Map</a><a href="projects.html">Projects</a><a href="announcements.html">Notices</a><a class="active" href="report.html">Report</a><button id="logout" class="link-button">Logout</button></nav></header>
+<main class="container narrow"><p class="tag">SAFETY REPORT</p><h1>Report a Construction Problem</h1>
+<form id="reportForm" class="form-card">
+<label>Your name</label><input id="name"  required minlength="2" maxlength="100">
+<label>Location</label><input id="location" required minlength="3" maxlength="150"
+       placeholder="e.g. Near Library">
+<label>Description</label><textarea id="description" rows="6" required minlength="10" maxlength="500"
+          placeholder="Describe the problem..."></textarea>
+<button class="btn" type="submit">Submit Report</button><p id="message"></p>
+</form></main>
+
+<!--change 6-->
+<script src="js/common.js"></script>
+
+<script src="js/report.js"></script>
+</body>
+</html>
